@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApplication1.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Login" Height="500" Width="350" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        FontFamily="Segoe UI Emoji">
+    <Grid>
+
+        <Rectangle Height="500" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF26EABD" Offset="0.016"/>
+                    <GradientStop Color="#FF38268A" Offset="1"/>
+                    <GradientStop Color="#FF288B62" Offset="0.546"/>
+                    <GradientStop Color="#FF1ED3AA" Offset="0.064"/>
+                    <GradientStop Color="#FF20C2AC" Offset="0.169"/>
+                    <GradientStop Color="#FE21B687" Offset="0.253"/>
+                    <GradientStop Color="#FE23A386" Offset="0.378"/>
+                    <GradientStop Color="#FE259873" Offset="0.45"/>
+                    <GradientStop Color="#FF298165" Offset="0.59"/>
+                    <GradientStop Color="#FF2C5A70" Offset="0.715"/>
+                    <GradientStop Color="#FF2D4475" Offset="0.775"/>
+                    <GradientStop Color="#FF2F3D7B" Offset="0.843"/>
+                    <GradientStop Color="#FF303E7F" Offset="0.888"/>
+                    <GradientStop Color="#FF313181" Offset="0.916"/>
+                    <GradientStop Color="#FF2C4084" Offset="0.952"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Width="280" Height="247" VerticalAlignment="Bottom" Margin="29,0,35,80" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid VerticalAlignment="Bottom" Margin="35,0,35,80" Height="247">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="86*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="REGISTER" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="84,22,79,0" Foreground="Gray" FontSize="18" Grid.ColumnSpan="3" Width="111"/>
+            <StackPanel VerticalAlignment="Center" Margin="15,61" Grid.ColumnSpan="3">
+                <TextBox x:Name="TxtName"  Margin="0,10" materialDesign:HintAssist.Hint="NAME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <TextBox x:Name="TxtEmail" Margin="0,10" materialDesign:HintAssist.Hint="EMAIL" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+            </StackPanel>
+        </Grid>
+        <Button x:Name="btnRegister" Click="btnRegister_Click" Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="95,0,99,69" Content="REGISTER" />
+
+    </Grid>
+</Window>
